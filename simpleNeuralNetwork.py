@@ -8,11 +8,11 @@ def sigmoid(x, deriv=False):
 
 
 x = np.array([
-    [0,0,1],
-    [0,1,1],
-    [1,0,1],
-    [1,1,1],
-    [0,0,1]
+    [0, 0, 1],
+    [0, 1, 1],
+    [1, 0, 1],
+    [1, 1, 1],
+    [0, 0, 1]
 ])
 
 y = np.array([
@@ -34,7 +34,7 @@ for i in range(60001):
 
     error = y - layer_2
     if i % 10000 == 0:
-        print("after %d step(s) training the error is + %s" % (i, str(np.mean(np.abs(error)))))
+        print("after %6d step(s) training the error is %s" % (i, str(np.mean(np.abs(error)))))
 
     layer_2_delta = error * sigmoid(layer_2, True)
     l1_error = layer_2_delta.dot(w1.T)
