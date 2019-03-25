@@ -1,7 +1,3 @@
-'''
-这个代码里有奇怪的问题
-'''
-
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
